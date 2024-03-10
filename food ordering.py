@@ -1,23 +1,18 @@
-foods = []
-prices =[]
-total = 0
+operator = input("Enter an operator ( + - * /): ")
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-while True:
-    food = input("Enter a food to buy(q to quit) ")
-    if food.lower() == "q":
-        break
-    else:
-        price = float(input(f"Enter the price of a {food}: "))
-        foods.append(food)
-        prices.append(price)
-
-print("------YOUR CART-----")
-
-for food in foods:
-    print(food, end= " ")
-
-for price in prices:
-    total += price
-
-print()
-print (f"Your total is:  {total} ")
+if operator == "+":
+    result = num2 + num1
+    print(round(result, 3))
+elif operator == "-":
+    result = num1 - num2
+    print(round(result, 3))
+elif operator == "*":
+    result = num1 * num2
+    print(round(result, 3))
+elif operator == "/":
+    result = num1 / num2
+    print(round(result, 3))
+else:
+    print(f"{operator} is not a valid operator")
